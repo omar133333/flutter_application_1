@@ -1,0 +1,53 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: login(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      drawer: Drawer(),
+      body: Text("omar"),
+    );
+  }
+}
+
+class login extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('log in'),
+          centerTitle: true,
+        ),
+        drawer: Drawer(),
+        body: Container(
+          width: 300,
+          height: 200,
+          margin: EdgeInsets.all(50),
+          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(width: 20, color: Colors.black),
+            color: Color.fromARGB(255, 54, 244, 57),
+          ),
+          child: const Text('password',
+              style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w700)),
+        ));
+  }
+}
